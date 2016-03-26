@@ -1,8 +1,8 @@
-defmodule Mix.Utensil.Build.Nmake do
+defmodule Mix.Utensil.Build.Gmake do
   use Mix.Utensil
 
   def use(args) do
-    {"nmake", ["/F", "Makefile.win"] ++ args}
+    {"gmake", args}
   end
 
 
@@ -15,9 +15,8 @@ defmodule Mix.Utensil.Build.Nmake do
 
   def build_error_message do
     """
-    Install a recent version of Visual Studio.
+    Error building.
     """
   end
-
 
 end

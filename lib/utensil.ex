@@ -1,7 +1,16 @@
-defmodule MixUtensil.Utensil do
-  defmacro __using__(_) do
+defmodule Mix.Utensil do
+  @moduledoc """
+
+  A module for creating reuable tasks.
+
+  """
+
+  @callback use([any]) :: any
+
+  defmacro __using__(_opts) do
     quote do
-      use Mix.Task
+      @behaviour Mix.Utensil
     end
   end
+
 end
