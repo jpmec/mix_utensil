@@ -4,7 +4,7 @@ defmodule UtensilBuildTest do
 
 
   defmodule SampleBuildUtensil do
-    use Mix.Utensil.Build, Mix.Utensil.Build.default_exec_utensil()
+    use Mix.Utensil.Build, [Mix.Utensil.Build.default_exec_utensil(), Mix.Utensil.Build.Env]
   end
 
 

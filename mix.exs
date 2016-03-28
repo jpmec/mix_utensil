@@ -20,6 +20,8 @@ defmodule MixUtensil.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [
+      {:exvc, git: "https://github.com/jpmec/exvc", branch: "develop"}
+    ]
   end
 end
